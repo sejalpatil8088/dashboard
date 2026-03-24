@@ -1,0 +1,95 @@
+.sidebar {
+  width: 56px;
+ height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+}
+
+/* Logo */
+.sidebar__logo {
+  margin-bottom: 20px;
+}
+
+.sidebar__logo-mark {
+  width: 32px;
+  height: 32px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* Nav */
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+/* Buttons */
+.sidebar__nav-item {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+.sidebar__nav-item:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Active (IMPORTANT) */
+.sidebar__nav-item.active {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+/* Bottom */
+.sidebar__bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  /* margin-top: -8px; */
+}
+
+/* Profile avatar */
+.sidebar__profile {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+ 
+
+}
+
+.sidebar__profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+
+}

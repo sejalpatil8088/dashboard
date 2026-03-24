@@ -1,0 +1,127 @@
+.table-widget {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px 16px 16px;
+  min-height: 140px;
+  transition: box-shadow 0.2s ease;
+}
+
+.table-widget:hover {
+  box-shadow: 0 2px 12px var(--color-shadow);
+}
+
+.table-widget--loading {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.table-widget__skeleton-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Header */
+.table-widget__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.table-widget__title {
+   font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  /* color: var(--color-text-primary); */
+  /* text-transform: uppercase; */
+  letter-spacing: 0.01em;
+}
+
+/* Dropdown wrapper */
+.table-widget__dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Figma-style select */
+.table-widget__select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+
+  padding: 6px 30px 6px 10px;
+  height: 28px; 
+
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+
+  cursor: pointer;
+  outline: none;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Hover */
+.table-widget__select:hover {
+  background-color: #f9fafb;
+}
+
+/* Arrow */
+.table-widget__chevron {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Table */
+.laggards-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.laggards-table__row {
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.laggards-table__row:first-child {
+  border-top: none;
+}
+
+.laggards-table__name {
+  font-size: 13px;
+  font-weight: 600;
+  /* color: var(--color-accent); */
+  color: #028DD0;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.laggards-table__name:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.laggards-table__value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  padding: 8px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.laggards-table__trend {
+  padding: 8px 0;
+  text-align: right;
+}

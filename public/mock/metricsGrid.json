@@ -1,0 +1,31 @@
+{
+  "sections": [
+    {
+      "title": "Traffic",
+      "status": "Good",
+      "rows": [
+        { "label": "Organic SOV", "value": "23.5%", "trend": 32.5, "isPositive": true },
+        { "label": "Paid SOV", "value": "23.5%", "trend": 32.5, "isPositive": true },
+        { "label": "Branded Search", "value": "23.5%", "trend": 32.5, "isPositive": true }
+      ]
+    },
+    {
+      "title": "Conversion",
+      "status": "Medium",
+      "rows": [
+        { "label": "RPI", "value": 89, "trend": 32.5, "isPositive": true },
+        { "label": "Rating", "value": 56, "trend": 32.5, "isPositive": true },
+        { "label": "Content Score", "value": 32, "trend": 32.5, "isPositive": true }
+      ]
+    },
+    {
+      "title": "Operations",
+      "status": "Poor",
+      "rows": [
+        { "label": "Listing Status", "value": "23.5%", "trend": 32.5, "isPositive": true },
+        { "label": "Fill Rate", "value": "23.5%", "trend": 32.5, "isPositive": true },
+        { "label": "Stock in Hand", "value": "23.5%", "trend": 32.5, "isPositive": true }
+      ]
+    }
+  ]
+}

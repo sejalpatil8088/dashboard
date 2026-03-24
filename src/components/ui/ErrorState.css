@@ -1,0 +1,37 @@
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  min-height: 80px;
+}
+
+.error-icon {
+  font-size: 20px;
+  color: var(--color-danger);
+}
+
+.error-message {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin: 0;
+}
+
+.error-retry {
+  margin-top: 4px;
+  padding: 4px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.error-retry:hover {
+  background: var(--color-bg-hover);
+}

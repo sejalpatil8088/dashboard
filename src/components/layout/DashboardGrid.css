@@ -1,0 +1,31 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 0 24px 24px;
+  background: transparent; /* avoid any extra visible container line */
+}
+
+.dashboard-grid__cell {
+  min-width: 0; /* prevent grid blowout */
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid__cell[style*='span 3'] {
+    grid-column: span 2 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid__cell[style*='span'] {
+    grid-column: span 1 !important;
+  }
+}

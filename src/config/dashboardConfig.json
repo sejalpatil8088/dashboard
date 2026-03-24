@@ -1,0 +1,51 @@
+[
+  {
+    "id": "marketShare",
+    "type": "topCard",
+    "title": "Market Share",
+    "dataSource": "/mock/marketShare.json",
+    "colSpan": 1
+  },
+  {
+    "id": "overallSOV",
+    "type": "topCard",
+    "title": "Overall SOV%",
+    "dataSource": "/mock/overallSOV.json",
+    "colSpan": 1
+  },
+  {
+    "id": "wtAvailability",
+    "type": "topCard",
+    "title": "Wt. Availability%",
+    "dataSource": "/mock/wtAvailability.json",
+    "colSpan": 1
+  },
+  {
+    "id": "metricsGrid",
+    "type": "metricsGrid",
+    "title": "Performance Metrics",
+    "dataSource": "/mock/metricsGrid.json",
+    "colSpan": 3
+  },
+  {
+    "id": "topLaggardsSOV",
+    "type": "table",
+    "title": "Top Laggards",
+    "dataSource": "/mock/topLaggardsSOV.json",
+    "colSpan": 1
+  },
+  {
+    "id": "topLaggardsRPI",
+    "type": "table",
+    "title": "Top Laggards",
+    "dataSource": "/mock/topLaggardsRPI.json",
+    "colSpan": 1
+  },
+  {
+    "id": "topLaggardsAvail",
+    "type": "table",
+    "title": "Top Laggards",
+    "dataSource": "/mock/topLaggardsAvail.json",
+    "colSpan": 1
+  }
+]
