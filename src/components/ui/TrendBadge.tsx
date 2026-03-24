@@ -16,9 +16,9 @@ export const TrendBadge: React.FC<TrendBadgeProps> = memo(({ value, isPositive }
     className={`trend-badge ${isPositive ? 'trend-badge--up' : 'trend-badge--down'}`}
     aria-label={`${isPositive ? 'Up' : 'Down'} ${Math.abs(value).toFixed(1)} percent`}
   >
-    <span className="trend-badge__arrow" aria-hidden="true">
+    {/* <span className="trend-badge__arrow" aria-hidden="true">
       {isPositive ? '↑' : '↓'}
-    </span>
+    </span> */}
     {Math.abs(value).toFixed(1)}%
   </span>
 ));

@@ -12,9 +12,9 @@ import './MetricsGrid.css';
 // ─── Constants ─────────────────────────────────────────────────────────────
 
 const SECTION_ICONS: Record<string, React.ReactNode> = {
-  Traffic: <Eye size={16} />,
-  Conversion: <ShoppingCart size={16} />,
-  Operations: <Truck size={16} />,
+  Traffic: <Eye size={14} />,
+  Conversion: <ShoppingCart size={14} />,
+  Operations: <Truck size={14} />,
 };
 
 const STATUS_CLASS: Record<MetricStatus, string> = {
@@ -31,6 +31,8 @@ interface SectionPanelProps {
 
 const SectionPanel: React.FC<SectionPanelProps> = memo(({ section }) => (
   <div className="metrics-section" role="region" aria-label={section.title}>
+
+    {/* ── Card Header: icon + title + status badge + expand ── */}
     <div className="metrics-section__header">
       <span className="metrics-section__icon" aria-hidden="true">
         {SECTION_ICONS[section.title] ?? '•'}
@@ -51,6 +53,7 @@ const SectionPanel: React.FC<SectionPanelProps> = memo(({ section }) => (
       </button>
     </div>
 
+    {/* ── Main metrics table ── */}
     <table className="metrics-table" aria-label={`${section.title} metrics`}>
       <tbody>
         {section.rows.map((row) => (
@@ -65,18 +68,44 @@ const SectionPanel: React.FC<SectionPanelProps> = memo(({ section }) => (
       </tbody>
     </table>
 
-    {/* ── Top Laggards (renders inside same card if data exists) ── */}
+    {/* ── Top Laggards — inside the same card, separated by a divider ── */}
     {section.laggards && section.laggards.length > 0 && (
-      <div className="metrics-section__bottom">
-        <div className="metrics-laggards__header">
-          <span className="metrics-laggards__title">Top Laggards</span>
-          <span className="metrics-laggards__metric">{section.laggardsMetric}</span>
+      <div className="metrics-section__laggards">
+
+        {/* Laggards sub-header */}
+        <div className="laggards__header">
+          <span className="laggards__title">Top Laggards</span>
+
+          {/* Dropdown pill */}
+          <div className="laggards__dropdown">
+            <span className="laggards__metric-label">{section.laggardsMetric}</span>
+            <svg
+              className="laggards__chevron"
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M2.5 4.5L6 8L9.5 4.5"
+                stroke="#6B7280"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
         </div>
-        <table className="metrics-table">
+
+        {/* Laggards rows */}
+        <table className="metrics-table metrics-table--laggards">
           <tbody>
             {section.laggards.map((row) => (
               <tr key={row.label} className="metrics-table__row">
-                <td className="metrics-table__label metrics-table__label--link">{row.label}</td>
+                <td className="metrics-table__label metrics-table__label--link">
+                  {row.label}
+                </td>
                 <td className="metrics-table__value">{row.value}</td>
                 <td className="metrics-table__trend">
                   <TrendBadge value={row.trend} isPositive={row.isPositive} />

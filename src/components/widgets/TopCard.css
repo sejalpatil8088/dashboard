@@ -1,3 +1,4 @@
+/* ── Card shell ── */
 .top-card {
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -5,67 +6,71 @@
   padding: 14px 16px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  min-height: 100px;
+  gap: 6px;
+   height: 100%;  
   position: relative;
-  transition: all 0.2s ease;
+  transition: box-shadow 0.2s ease;
 }
 
 .top-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
 }
 
-/* LOADING */
+/* ── Loading ── */
 .top-card--loading {
   gap: 12px;
   justify-content: center;
 }
 
-/* HEADER */
-.top-card__header {
+/* ── Trend badge (top-right) ── */
+.top-card__trend {
+  position: absolute;
+  top: 12px;
+  right: 14px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 3px;
+  background: #ffffff;          /* white background */
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 2px 7px 2px 5px;
 }
 
-.top-card__icon {
-  color: #6b7280;
+.top-card__trend-value {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  /* color is set inline (green / red) */
+}
+
+/* ── Header: title + label stacked ── */
+.top-card__header {
+  display: flex;
+  flex-direction: column;   /* label goes on the next line */
+  gap: 1px;
+  padding-right: 72px;      /* keep clear of the badge */
 }
 
 .top-card__title {
-  font-size: 16px;
-  font-weight: 700;
-  color: black;
-  letter-spacing: 0.05em;
-  /* text-transform: uppercase; */
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: 0.01em;
 }
 
 .top-card__label {
   font-size: 10px;
   color: #9ca3af;
   font-style: italic;
-  
-
 }
 
-/* BODY */
+/* ── Body: value left, sparkline right ── */
 .top-card__body {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-/* VALUE + GRAPH */
-.top-card__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-/* VALUE */
-.top-card__left {
-  display: flex;
-  flex-direction: column;
+  gap: 8px;
+  margin-top: 2px;
 }
 
 .top-card__value {
@@ -73,17 +78,12 @@
   font-weight: 700;
   color: #111827;
   letter-spacing: -0.02em;
+  flex-shrink: 0;
 }
 
-/* GRAPH */
+/* ── Sparkline ── */
 .top-card__sparkline {
-  width: 55%;
+  flex: 1;
+  max-width: 58%;
   height: 60px;
-}
-
-/* TREND BADGE */
-.top-card__trend {
-  position: absolute;
-  top: 12px;
-  right: 14px;
 }

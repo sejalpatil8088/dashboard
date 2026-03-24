@@ -26,7 +26,7 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = memo(({ activeTab, onTabChange }) => {
   const { filters, setPlatform } = useFilter();
-  const [activeSubTab, setActiveSubTab] = React.useState('By Value');
+ const [activeSubTab, setActiveSubTab] = React.useState('MRP');
   const [isDateOpen, setIsDateOpen] = React.useState(false);
 const [selectedDate, setSelectedDate] = React.useState('This Week');
 
@@ -105,7 +105,7 @@ const [selectedDate, setSelectedDate] = React.useState('This Week');
         {/* 🔹 Breadcrumb */}
      
         <nav className="breadcrumb">
-          <span>Planning</span>
+          <span>Breadcrumb</span>
           <span className="sep">›</span>
           <span>Breadcrumb</span>
           <span className="sep">›</span>
@@ -129,10 +129,10 @@ const [selectedDate, setSelectedDate] = React.useState('This Week');
     ))}
   </div>
 
-  {/* RIGHT SIDE - MRP / SP / By Value */}
+
 <div className="sub-tab-group">
 
-  {/* ✅ MRP / SP Toggle */}
+
   <div className="price-toggle">
   {['MRP', 'SP'].map((t, index) => (
     <button
@@ -144,7 +144,6 @@ const [selectedDate, setSelectedDate] = React.useState('This Week');
     </button>
   ))}
 </div>
-  {/* ✅ By Value Dropdown */}
   <select
     className="value-dropdown"
     value={activeSubTab}
